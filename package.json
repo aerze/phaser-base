@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run webpack && npm run static",
+    "start": "npm-run-all -p webpack static",
     "webpack": "webpack -w",
     "static": "static -H \"{\\\"Cache-Control\\\": \\\"no-cache, must-revalidate\\\"}\" ./public",
     "test": "standard ./src"
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/aerze/breakout#readme",
   "dependencies": {
+    "npm-run-all": "^4.1.2",
     "phaser-ce": "^2.8.8",
     "webfontloader": "^1.6.28"
   },
