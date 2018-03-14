@@ -1,15 +1,9 @@
 import Phaser from 'phaser-ce'
 
-import BootState from './states/boot'
-import LoadState from './states/load'
-import MenuState from './states/menu'
-import GameState from './states/game'
+import MainState from './state'
 
-const game = new Phaser.Game(512, 512, Phaser.AUTO, 'canvas')
-game.state.add('boot', new BootState(game))
-game.state.add('load', new LoadState(game))
-game.state.add('menu', new MenuState(game))
-game.state.add('game', new GameState(game))
-game.state.start('boot')
-
+const game = new Phaser.Game(256, 256, Phaser.AUTO, 'canvas')
+game.state.add('main', new MainState(game))
 window.game = game
+
+game.state.start('main')
