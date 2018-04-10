@@ -1,24 +1,25 @@
 {
-  "name": "breakout",
+  "name": "phaser-base",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all -p webpack static",
     "webpack": "webpack -w",
-    "static": "static -H \"{\\\"Cache-Control\\\": \\\"no-cache, must-revalidate\\\"}\" ./public",
+    "static":
+      "static -H \"{\\\"Cache-Control\\\": \\\"no-cache, must-revalidate\\\"}\" ./public",
     "test": "standard ./src"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aerze/breakout.git"
+    "url": "git+https://github.com/aerze/phaser-base.git"
   },
   "author": "Gus Suarez <gus@mythril.co>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aerze/breakout/issues"
+    "url": "https://github.com/aerze/phaser-base/issues"
   },
-  "homepage": "https://github.com/aerze/breakout#readme",
+  "homepage": "https://github.com/aerze/phaser-base#readme",
   "dependencies": {
     "npm-run-all": "^4.1.2",
     "phaser-ce": "^2.8.8",
