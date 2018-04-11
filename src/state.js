@@ -1,6 +1,5 @@
 import Phaser from 'phaser-ce'
 import loadDino from './utils/loadDino'
-import { CLIENT_RENEG_WINDOW } from 'tls'
 
 const DARK_BLUE = '#3E80BE'
 
