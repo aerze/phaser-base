@@ -13,8 +13,8 @@ class mainState extends Phaser.State {
     this.game.scale.pageAlignHorizontally = true
     this.game.scale.pageAlignVertically = true
 
+    this.game.renderer.renderSession.roundPixels = true
     Phaser.Canvas.setImageRenderingCrisp(this.game.canvas)
-    this.game.renderer.renderSession.roundPixels = false
     this.game.physics.startSystem(Phaser.Physics.ARCADE)
 
     const names = ['doux', 'mort', 'tard', 'vita']
@@ -28,12 +28,14 @@ class mainState extends Phaser.State {
     this.pad = [this.game.input.gamepad.pad1, this.game.input.gamepad.pad2]
 
     this.p1 = this.game.add.sprite(100, 100, 'doux')
+    this.p1.smoothed = false
     this.p1.scale.set(2)
     this.game.physics.enable(this.p1, Phaser.Physics.ARCADE)
     this.p1.body.collideWorldBounds = true
     this.p1.score = 0
 
     this.p2 = this.game.add.sprite(200, 200, 'mort')
+    this.p2.smoothed = false
     this.game.physics.enable(this.p2, Phaser.Physics.ARCADE)
     this.p2.body.collideWorldBounds = true
     this.p2.score = 0
@@ -67,7 +69,7 @@ class mainState extends Phaser.State {
 
     this.game.physics.arcade.collide(this.p1, this.p2)
 
-    this.game.debug.bodyInfo(this.p1, 32, 32)
+    // this.game.debug.bodyInfo(this.p1, 32, 32)
     // this.game.debug.body(this.p1)
   }
 }
