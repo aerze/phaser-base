@@ -6,8 +6,7 @@
   "scripts": {
     "start": "npm-run-all -p webpack static",
     "webpack": "webpack -w",
-    "static":
-      "static -H \"{\\\"Cache-Control\\\": \\\"no-cache, must-revalidate\\\"}\" ./public",
+    "static": "static -H \"{\\\"Cache-Control\\\": \\\"no-cache, must-revalidate\\\"}\" ./public",
     "test": "standard ./src"
   },
   "repository": {
